@@ -1,0 +1,73 @@
+package ejercicios_vectores;
+/**
+ * Almacenar en una tabla de 100 elementos números aleatorios entre 1 y 500. mostrar el
+ * máximo, el mínimo y la media. Realizar otra versión donde no puedan almacenarse
+ * números repetidos.
+ */
+import java.util.Random;
+import java.util.Arrays;
+public class Ej4 {
+    public static void main(String[] args) {
+        int[] vector = almecenarNum(100,1,500);
+        System.out.println(Arrays.toString(vector));
+        maXyMin(vector);
+
+        double media = calcularMedia(vector);
+        System.out.println("Media: " + media);
+
+
+
+
+    }
+
+    /**
+     * BUCLE PARA CREAR NUMS ENTEROS ALEATORIOS segun los parametros
+     * @return Devuelve un vector con todos los valores del array
+     * @param inicio
+     * @param fin
+     * @param tamanioVector
+     */
+    public static int [] almecenarNum(int tamanioVector,int inicio, int fin){
+        Random random = new Random();
+        int vector_Rand [] = new int [tamanioVector];
+
+        for (int i = 0; i < vector_Rand.length; i++) { //Bucle para almacenar valores en el array
+            vector_Rand[i]=random.nextInt(inicio,fin)+1;
+        }
+
+        return vector_Rand;
+    }
+
+    /**
+     * @param vector
+     * Imprime una cadena con los valores maximos y minimos del array
+     */
+    public static void maXyMin(int[] vector){
+        int max = vector[0];
+        int min = vector[0];
+
+        for (int valor : vector ) {
+            if (valor > max) {
+                max = valor;
+            }
+
+            if (valor < min){
+                min = valor;
+            }
+        }
+
+        System.out.println("Max: " + max+ "\n" + "Min: " + min);
+    }
+
+    public static double calcularMedia(int [] vector){
+        double media = 0;
+        int suma = 0;
+
+        for (int valor : vector){
+           suma += valor;
+        }
+
+        media = suma / vector.length;
+        return media;
+    }
+}

@@ -6,16 +6,27 @@ package ejercicios_vectores;
 public class Ej3 {
     public static void main(String[] args) {
 
-        int [] array = Ej1.crearVector(9);
-
-    }
-
-    public static String mostrarPosicion(int [] vector){
-        String resultado = "";
-
-
-        return resultado;
+        int[] array = Ej1.crearVector(6);
+        mostrarPosicion(array);
     }
 
 
+    public static void mostrarPosicion(int[] vector) {
+        if (vector != null) {
+            System.out.println("PARES: ");
+            for (int valor : vector) {
+                if (valor % 2 == 0) {
+                    System.out.print(valor + " ");
+                }
+            }
+            System.out.println();
+
+            System.out.println("IMPARES: ");
+            for (int valor : vector) {
+                if (valor % 2 != 0) {
+                    System.out.print(valor + " ");
+                }
+            }
+        }
+    }
 }
