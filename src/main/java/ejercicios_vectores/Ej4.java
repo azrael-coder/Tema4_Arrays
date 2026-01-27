@@ -34,7 +34,6 @@ public class Ej4 {
         for (int i = 0; i < vector_Rand.length; i++) { //Bucle para almacenar valores en el array
             vector_Rand[i]=random.nextInt(inicio,fin)+1;
         }
-
         return vector_Rand;
     }
 

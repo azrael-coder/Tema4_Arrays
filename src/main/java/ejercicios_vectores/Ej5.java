@@ -4,11 +4,15 @@ package ejercicios_vectores;
  */
 public class Ej5 {
     public static void main(String[] args) {
-        //int [] vector =
+        String vector = calcularPorcentaje();
+        System.out.println(vector);
     }
 
 
-
+    /**
+     * Metodo que llama a almacenarNum > crea un array con numeros aleatorios en el rango segun parametros
+     * @return El porcentaje de numeros que supera la media
+     */
     public static String calcularPorcentaje(){
         int[] vector = Ej4.almecenarNum(20,1,20);
         double media = 0;
@@ -26,7 +30,7 @@ public class Ej5 {
             }
         }
 
-        int porcentaje = (contador / 20) * 100;
+        double porcentaje = ((double) contador / vector.length) * 100;
 
         return "El porcentaje que supera la media es: "+porcentaje;
     }
