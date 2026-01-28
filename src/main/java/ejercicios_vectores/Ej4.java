@@ -8,12 +8,14 @@ import java.util.Random;
 import java.util.Arrays;
 public class Ej4 {
     public static void main(String[] args) {
-        int[] vector = almecenarNum(100,1,500);
+        int[] vector = almecenarNum(10,1,10);
         System.out.println(Arrays.toString(vector));
-        maXyMin(vector);
 
-        double media = calcularMedia(vector);
-        System.out.println("Media: " + media);
+
+        //maXyMin(vector);
+
+       // double media = calcularMedia(vector);
+        //System.out.println("Media: " + media);
 
 
 
@@ -29,12 +31,26 @@ public class Ej4 {
      */
     public static int [] almecenarNum(int tamanioVector,int inicio, int fin){
         Random random = new Random();
-        int vector_Rand [] = new int [tamanioVector];
+        int[] vectorRand = new int[tamanioVector];
 
-        for (int i = 0; i < vector_Rand.length; i++) { //Bucle para almacenar valores en el array
-            vector_Rand[i]=random.nextInt(inicio,fin)+1;
+
+        for (int i = 0; i<tamanioVector; i++){
+            int valor;
+            boolean repetido;
+
+            do {
+                valor = random.nextInt(fin-inicio+1)+inicio;
+                repetido = true;
+
+                    for (int j = 0; j < i; j++){
+                        //if ()
+                    }
+
+            }while (repetido);
         }
-        return vector_Rand;
+
+        return vectorRand;
+
     }
 
     /**
