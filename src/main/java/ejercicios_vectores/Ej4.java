@@ -26,26 +26,28 @@ public class Ej4 {
      */
     public static int [] almecenarNum(int tamanioVector,int inicio, int fin){
         Random random = new Random();
-        int[] vectorRand = new int[tamanioVector];
+         int vectorRand[] = new int[0];
+        if (tamanioVector > 0 && inicio > 0  && fin > 0) {
+            vectorRand = new int[tamanioVector];
 
+            for (int i = 0; i < tamanioVector; i++) {
+                int valor;
+                boolean repetido;
 
-        for (int i = 0; i<tamanioVector; i++){
-            int valor;
-            boolean repetido;
+                do {
+                    valor = random.nextInt(inicio, fin) + 1;
+                    repetido = false;
 
-            do {
-                valor = random.nextInt(inicio,fin)+1;
-                repetido = false;
-
-                    for (int j = 0; j < i; j++){
-                        if (vectorRand[j] == valor){
+                    for (int j = 0; j < i; j++) {
+                        if (vectorRand[j] == valor) {
                             repetido = true;
                         }
                     }
-            }while (repetido);
-            vectorRand[i] = valor;
-        }
+                } while (repetido);
+                vectorRand[i] = valor;
+            }
 
+        }
         return vectorRand;
     }
 
