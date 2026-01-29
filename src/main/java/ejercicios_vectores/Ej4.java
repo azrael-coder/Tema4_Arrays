@@ -8,23 +8,18 @@ import java.util.Random;
 import java.util.Arrays;
 public class Ej4 {
     public static void main(String[] args) {
-        int[] vector = almecenarNum(10,1,10);
+        int[] vector = almecenarNum(10,1,100);
         System.out.println(Arrays.toString(vector));
-
 
         //maXyMin(vector);
 
        // double media = calcularMedia(vector);
         //System.out.println("Media: " + media);
-
-
-
-
     }
 
     /**
      * BUCLE PARA CREAR NUMS ENTEROS ALEATORIOS segun los parametros
-     * @return Devuelve un vector con todos los valores del array
+     * @return Devuelve un vector con todos los valores del array y sin numeros repetidos
      * @param inicio
      * @param fin
      * @param tamanioVector
@@ -39,18 +34,19 @@ public class Ej4 {
             boolean repetido;
 
             do {
-                valor = random.nextInt(fin-inicio+1)+inicio;
-                repetido = true;
+                valor = random.nextInt(inicio,fin)+1;
+                repetido = false;
 
                     for (int j = 0; j < i; j++){
-                        //if ()
+                        if (vectorRand[j] == valor){
+                            repetido = true;
+                        }
                     }
-
             }while (repetido);
+            vectorRand[i] = valor;
         }
 
         return vectorRand;
-
     }
 
     /**
@@ -70,7 +66,6 @@ public class Ej4 {
                 min = valor;
             }
         }
-
         System.out.println("Max: " + max+ "\n" + "Min: " + min);
     }
 
