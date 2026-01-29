@@ -14,7 +14,7 @@ public class Ej5 {
      * @return El porcentaje de numeros que supera la media
      */
     public static String calcularPorcentaje(){
-        int[] vector = Ej4.almecenarNum(20,1,20);
+        int[] vector = Ej4.almacenarNum(20,1,20);
         double media = 0;
         int suma = 0;
         int contador = 0; //Representa la cantidad de numeros que superan la media

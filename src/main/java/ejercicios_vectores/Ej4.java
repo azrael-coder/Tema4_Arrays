@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Arrays;
 public class Ej4 {
     public static void main(String[] args) {
-        int[] vector = almecenarNum(10,1,100);
+        int[] vector = almacenarNum(10,1,100);
         System.out.println(Arrays.toString(vector));
 
         //maXyMin(vector);
@@ -24,7 +24,7 @@ public class Ej4 {
      * @param fin
      * @param tamanioVector
      */
-    public static int [] almecenarNum(int tamanioVector,int inicio, int fin){
+    public static int [] almacenarNum(int tamanioVector,int inicio, int fin){
         Random random = new Random();
          int vectorRand[] = new int[0];
         if (tamanioVector > 0 && inicio > 0  && fin > 0) {
