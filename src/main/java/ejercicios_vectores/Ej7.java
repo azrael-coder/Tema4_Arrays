@@ -10,57 +10,45 @@ import java.util.Arrays;
  */
 public class Ej7 {
     public static void main(String[] args) {
-        int[] array = {1,2,2,2,1,3,5,2,7,9,2,2,4,2,1};
+        int[] array = {1,1,1,1,1,1,2,2,2,3,3};
 
-        int[] resultado = hallarModa(array);
+        int[] resultado = hallarModas(array);
         System.out.println(Arrays.toString(resultado));
     }
 
-    public static int[] hallarModa(int[] vector){
-        int[]modas = new int[2];
-        int moda = 0;
-        int moda2 = 0;
+    /**
+     *
+     * @param vector EL ARRAY DONDE SE VA A BUSCAR LA MDA
+     * @return UN ARRAY CON LA PRIMERA Y SEGUNDA MODA
+     */
+    public static int[] hallarModas(int[] vector){ //!!!!HECHOOOO
+        int[] modas = new int[2];
+        int moda1 = 0;
         int maximo = 0;
-        boolean aparecido = false;
-        boolean modaSegunda = false;
+        int maximo2 = 0;
+        int moda2 = 0;
 
         if (vector != null){
-            for (int i = 0; i < vector.length; i++) {
+            for (int i = 0; i < vector.length; i++) { //BUCLE GENERAL PARA RECORRER EL VECTOR
+                int cantidad = Ej6.contarApariciones(vector[i], vector);
 
-                for (int j = 0; j < i; j++) {
-                    if (vector[i] == vector[j]) {
-                        aparecido = true;
-                    }
-                    if (vector[i] == moda){
-                        modaSegunda = true;
-                    }
+                if (cantidad >= maximo) {
+                        maximo = cantidad;
+                        moda1 = vector[i];
                 }
 
-                if (!aparecido) {
-                    int cantidad = Ej6.contarApariciones(vector[i], vector);
+                if (vector[i] != moda1){
+                     cantidad = Ej6.contarApariciones(vector[i], vector);
 
-                    if (cantidad >= maximo) {
-                        maximo = cantidad;
-                        moda = vector[i];
-                    }
-                }
-
-                if(!modaSegunda){
-                    int cantidad = Ej6.contarApariciones(vector[i], vector);
-
-                    if (cantidad >= maximo) {
-                        maximo = cantidad;
+                    if (cantidad >= maximo2) {
+                        maximo2 = cantidad;
                         moda2 = vector[i];
                     }
                 }
+                modas[0] = moda1;
+                modas[1] = moda2;
             }
-            modas[0] = moda;
-            modas[1] = moda2;
         }
         return modas;
     }
-
-
-
-
 }
