@@ -26,7 +26,7 @@ public class Ej4 {
      */
     public static int [] almacenarNum(int tamanioVector,int inicio, int fin){
         Random random = new Random();
-         int vectorRand[] = new int[0];
+        int vectorRand[] = new int[0];
         if (tamanioVector > 0 && inicio > 0  && fin > 0) {
             vectorRand = new int[tamanioVector];
 
@@ -59,13 +59,15 @@ public class Ej4 {
         int max = vector[0];
         int min = vector[0];
 
-        for (int valor : vector ) {
-            if (valor > max) {
-                max = valor;
-            }
+        if (vector != null) {
+            for (int valor : vector) {
+                if (valor > max) {
+                    max = valor;
+                }
 
-            if (valor < min){
-                min = valor;
+                if (valor < min) {
+                    min = valor;
+                }
             }
         }
         System.out.println("Max: " + max+ "\n" + "Min: " + min);
@@ -75,11 +77,13 @@ public class Ej4 {
         double media = 0;
         int suma = 0;
 
-        for (int valor : vector){
-           suma += valor;
-        }
+        if (vector != null) {
+            for (int valor : vector) {
+                suma += valor;
+            }
 
-        media = suma / vector.length;
+            media = suma / vector.length;
+        }
         return media;
     }
 }

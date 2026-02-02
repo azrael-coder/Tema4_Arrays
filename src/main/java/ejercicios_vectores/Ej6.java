@@ -13,25 +13,38 @@ public class Ej6 {
         System.out.println(cantidad);
     }
 
-    private static int contarApariciones(int num, int[] vector){
+    /**
+     *
+     * @param num EL NUMERO A BUSCAR
+     * @param vector EL ARRAY DONDE SE VA A BUSCAR
+     * @return LA CANTIDAD DE VECES QUE num APARECE
+     */
+    public static int contarApariciones(int num, int[] vector){
         int contador = 0;
+        if(num > 0 && vector != null) {
 
-        for(int i=0; i<vector.length; i++){
-            if(vector[i] == num){
-                contador++;
+            for (int i = 0; i < vector.length; i++) {
+                if (vector[i] == num) {
+                    contador++;
+                }
             }
         }
         return contador;
     }
 
+    /**
+     * @param vector
+     * @return La cantidad de numeros que aparecen como minimo dos veces en el array
+     */
     public static int aparicionesNum(int[] vector){//ARREGLAO
         int cantidadReps = 0;
         boolean aparecido = false;
 
-            for(int i=0; i<vector.length; i++){
+        if(vector != null) {
+            for (int i = 0; i < vector.length; i++) {
 
-                for(int j=0; j < i; j++){
-                    if(vector[i] == vector[j]){
+                for (int j = 0; j < i; j++) {
+                    if (vector[i] == vector[j]) {
                         aparecido = true;
                     }
                 }
@@ -39,11 +52,12 @@ public class Ej6 {
                 if (!aparecido) {
                     int cantidad = contarApariciones(vector[i], vector);
 
-                    if(cantidad >=2){
+                    if (cantidad >= 2) {
                         cantidadReps++;
                     }
                 }
             }
+        }
 
         return cantidadReps;
     }
