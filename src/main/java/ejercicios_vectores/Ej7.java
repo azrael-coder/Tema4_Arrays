@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public class Ej7 {
     public static void main(String[] args) {
-        int[] array = {1,1,1,1,1,1,2,2,2,3,3};
+        int[] array = {7,4,1,7,5,4,8,7,9,4,10,7};
 
         int[] resultado = hallarModas(array);
         System.out.println(Arrays.toString(resultado));
@@ -32,13 +32,13 @@ public class Ej7 {
             for (int i = 0; i < vector.length; i++) { //BUCLE GENERAL PARA RECORRER EL VECTOR
                 int cantidad = Ej6.contarApariciones(vector[i], vector);
 
-                if (cantidad >= maximo) {
+                if (cantidad >= maximo) { //HALLAR PRIMERA MODA
                         maximo = cantidad;
-                        moda1 = vector[i];
+                    moda1 = vector[i];
                 }
 
-                if (vector[i] != moda1){
-                     cantidad = Ej6.contarApariciones(vector[i], vector);
+                if (vector[i] != moda1) { //HALLAR SEGUNDA MODA
+                    cantidad = Ej6.contarApariciones(vector[i], vector);
 
                     if (cantidad >= maximo2) {
                         maximo2 = cantidad;
