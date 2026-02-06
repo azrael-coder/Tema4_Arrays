@@ -15,6 +15,7 @@ public class Ej1 {
         //int[] filaExtraida = extraerFila(1, matriz);
         //int[][] copia = duplicarMatriz(matriz);
         int[][] subMatriz = crearSubtabla(matriz,1,1,3,3);
+
         System.out.println(Arrays.deepToString(subMatriz));
     }
 
@@ -116,6 +117,22 @@ public class Ej1 {
     }
 
     /**
+     * EJ8:     Busca el valor mínimo en la tabla y devuelve su valor y la
+     * posición (fila, columna) donde se encuentra
+     * @param matriz
+     * @return
+     */
+    public static String buscarMinimo(int[][] matriz){
+        String resultado = "";
+
+
+
+        return resultado;
+    }
+
+
+
+    /**
      * EJ9: Intercambia las filas y columnas de la tabla (transposición). Si la
      * tabla no es cuadrada (el número de filas no es igual al número de columnas), el
      * tamaño de la tabla resultante será invertido: el número de filas se convertirá en el
@@ -191,7 +208,6 @@ public class Ej1 {
     }
 
 
-
     /**
      * EJ13: Recibe las posiciones de inicio de fila y columna y el tamaño de la
      * subtabla que se desea extraer. Devuelve una nueva tabla con los elementos de la
@@ -205,15 +221,17 @@ public class Ej1 {
      */
     public static int[][] crearSubtabla(int[][] matriz, int filInicio, int colInicio, int filas, int columnas){
         int[][] submatriz = new int[filas][columnas];
-        int subIndiceFil = 0;
-        int subIndiceCol = 0;
-        for (int i = filInicio; i < filas; i++){
-            for (int j = colInicio; j < columnas; j++){
-                submatriz[subIndiceFil][subIndiceCol] = matriz[i][j];
-                subIndiceCol++;
+
+        for (int i = 0; i < filas; i++){
+            for (int j = 0; j < columnas; j++){
+                submatriz[i][j] = matriz[filInicio+i][colInicio+j];
             }
-            subIndiceFil++;
         }
         return submatriz;
     }
+
+
+
+
+
 }
