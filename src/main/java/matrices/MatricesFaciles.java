@@ -2,7 +2,7 @@ package matrices;
 import java.util.Random;
 import java.util.Arrays;
 import java.util.Scanner;
-public class Ej1 {
+public class MatricesFaciles {
     public static void main(String[] args) {
         int[][] matriz = new int[4][4];
         llenarTabla(matriz);

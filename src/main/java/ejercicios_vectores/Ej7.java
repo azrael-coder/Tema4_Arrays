@@ -3,7 +3,7 @@ package ejercicios_vectores;
 import java.util.Arrays;
 
 /**
- * Realizar una función que reciba como parámetros una tabla de N elementos, y me devuelva
+ *EJ7: Realizar una función que reciba como parámetros una tabla de N elementos, y me devuelva
  * cuál es el número que más veces se repite (la moda). Ampliar el ejercicio para obtener los
  * dos números que más veces se repiten, en este caso la función devuelve un array de dos
  * posiciones: 1º moda y 2º moda.
@@ -16,8 +16,8 @@ public class Ej7 {
         System.out.println(Arrays.toString(resultado));
     }
 
+
     /**
-     *
      * @param vector EL ARRAY DONDE SE VA A BUSCAR LA MDA
      * @return UN ARRAY CON LA PRIMERA Y SEGUNDA MODA
      */
