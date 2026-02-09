@@ -15,7 +15,6 @@ public class Alumno {
     }
 
 
-
     public String toString() {
         return "Alumno{" +
                 "dni='" + dni + '\'' +
