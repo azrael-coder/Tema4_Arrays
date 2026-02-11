@@ -2,7 +2,7 @@ package ejercicios_vectores;
 
 public class Ej12 {
     public static void main(String[] args) {
-        int[] v1 = {4,3,2,1,5};
+        int[] v1 = {6,3,2,1,5};
         int[] v2 = {5,4,2,3,1};
 
         //System.out.println(iguales(v1,v2));
@@ -14,19 +14,17 @@ public class Ej12 {
      * a)
      * Devuelve verdadero, si ambas tablas tienen el mismo tamaño y todos los
      * elementos de v1 tienen el mismo valor y posición en la tabla v2
-     * @param v1
-     * @param v2
-     * @return
+     * @param v1 v1
+     * @param v2 v2
+     * @return true o false
      */
     public static boolean iguales(int[] v1, int[] v2) {
-        boolean igual = true;
-        boolean encontrado = true;
+        boolean igual = false;
 
         if (v1.length == v2.length) {
-            for (int i = 0; i < v1.length && encontrado; i++) {
-                if (v1[i] != v2[i]) {
-                    igual = false;
-                    encontrado = false;
+            for (int i = 0; i < v1.length && !igual; i++) {
+                if (v1[i] == v2[i]) {
+                    igual = true;
                 }
             }
         }

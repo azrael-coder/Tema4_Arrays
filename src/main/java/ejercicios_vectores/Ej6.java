@@ -33,7 +33,7 @@ public class Ej6 {
     }
 
     /**
-     * @param vector
+     * @param vector el array
      * @return La cantidad de numeros que aparecen como minimo dos veces en el array
      */
     public static int aparicionesNum(int[] vector){//ARREGLAO

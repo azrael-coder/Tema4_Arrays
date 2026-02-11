@@ -10,8 +10,8 @@ public class Ej9 {
 
     /**
      * Leer 10 números, almacenarlos en una tabla e indicar si la tabla está ordenada
-     * @param array
-     * @return
+     * @param array el vector
+     * @return true si esta ordenao false si  esta desordenao
      */
     public static boolean ordenada(int[] array){
         boolean ordenado = true;

@@ -1,5 +1,5 @@
 package matrices;
-
+import java.util.Arrays;
 public class Ej3 {
     /**
      * Rellena una matriz de valore booleanos segun un numero aleatorio entre 0 y 1
@@ -57,6 +57,7 @@ public class Ej3 {
 
             for (int i = 0; i < img.length; i++) {
                 boolean columIguales = false;
+
                 if (img[i].length == img2[i].length){
                     columIguales = true;
                 }
@@ -79,7 +80,7 @@ public class Ej3 {
 
     public static boolean[][] interseccion(boolean[][] imagen, boolean[][] imagen2) {
         boolean[][] resultado = new boolean[imagen.length][imagen[0].length];
-        if (imagen != null && imagen2 != null && imagen.length == imagen2.length) {
+        if (imagen2 != null && imagen.length == imagen2.length) {
 
             for (int i = 0; i < imagen.length; i++ ) {
 
@@ -101,11 +102,16 @@ public class Ej3 {
         boolean[][] imagen2 = new boolean[10][15];
         rellenar(imagen);
         rellenar(imagen2);
+
         //System.out.println(Arrays.deepToString(rellenar(imagen)));
 
         //System.out.println(imagenTexto(rellenar(imagen)));
 
-        System.out.println(pixelesComun(imagen, imagen2));
+       //System.out.println(pixelesComun(imagen, imagen2));
+
+        boolean[][] imagen3 = interseccion(imagen, imagen2);
+
+        System.out.println(Arrays.deepToString(imagen3));
     }
 
 }
