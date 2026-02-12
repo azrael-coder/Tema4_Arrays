@@ -172,8 +172,8 @@ public class MatricesFaciles {
     /**
      * EJ11:Recibe el índice de una fila y devuelve un arreglo unidimensional
      * con los elementos de esa fila. Si la fila no existe, muestra un mensaje de error
-     * @param fila
-     * @param matriz
+     * @param fila fila
+     * @param matriz matriz
      * @return fil
      */
     public static int[] extraerFila(int fila, int[][] matriz){
@@ -192,8 +192,8 @@ public class MatricesFaciles {
     /**
      * Crea y devuelve una nueva tabla que es una copia exacta de la
      * tabla original
-     * @param matriz
-     * @return
+     * @param matriz matriz
+     * @return copia
      */
     public static int[][] duplicarMatriz(int[][] matriz){
         int[][] copia = new int[matriz.length][matriz[0].length];
@@ -212,11 +212,11 @@ public class MatricesFaciles {
      * EJ13: Recibe las posiciones de inicio de fila y columna y el tamaño de la
      * subtabla que se desea extraer. Devuelve una nueva tabla con los elementos de la
      * subtabla indicada.
-     * @param matriz
-     * @param filInicio
-     * @param colInicio
-     * @param filas
-     * @param columnas
+     * @param matriz matriz
+     * @param filInicio filaInicio
+     * @param colInicio colInicio
+     * @param filas fila de la nueva tabla
+     * @param columnas columnas
      * @return submatriz
      */
     public static int[][] crearSubtabla(int[][] matriz, int filInicio, int colInicio, int filas, int columnas){

@@ -37,7 +37,7 @@ public class Ej13 {
             for (int i = 0; i < array1.length; i++) {
                 boolean aparecido = false;
 
-                for (int j = 0; j < i; j++) { //BUCLE PARA VALIDAR Q NO HALLA REPETIDOS
+                for (int j = 0; j < i && !aparecido; j++) { //BUCLE PARA VALIDAR Q NO HALLA REPETIDOS
                     if (array1[i] == array1[j]) {
                         aparecido = true;
                     }
